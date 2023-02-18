@@ -1,0 +1,11 @@
+.nav{
+    background:transparent;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    transition: all .5s ease-in-out;
+  }
+  
+  .nav.scrolled{
+    background:#0077B5 !important;
+  }
