@@ -32,16 +32,24 @@ function Home(){
                         <h1 className="text-white font-medium text-l md:text-5xl pb-8">
                         About Me
                         </h1>
-                        <p className="text-[#EEEEEE]">
+                        <p className="text-[#F8F7FF]">
                             I'm currently a student at Universitas Jember on Information System's Bachelor Degree Program 💻
                         <br />You can Call me Dhu. What i do? as far i acknowledge my skill is Web Development especially front-end,
                         <br />Data Science, Mobile Development a litle bit. And some Office like Excel and word  
                         <br /> Photograph is one of my hobbies, therefore i'll include my photograph as well 😁.  
                         </p>
+                        <br />
+                        <p className="text-[#F8F7FF]">
+                            I might be new with those domain, but i acknowledged myself as hardworker and capable to learn more!! 
+                          <br />
+                        </p>
                     </div>
 
                     <div className="pfp mr-8">
-                        <img src='images/bmo.jpg' alt="" className="img-responsive rounded-full w-36" />
+                        {/* <img src='images/bmo.jpg' alt="" className="img-responsive rounded-full w-36" /> */}
+                        <div className="circle rounded-full">
+                            
+                        </div>
                     </div>
 
                     </div>

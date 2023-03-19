@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -22,5 +26,11 @@ code {
 
 .about-me{
   /* height: 80vh; */
-  background-color: #0077B5;
+  background-color: #222222;
+}
+
+.circle{
+  height: 250px;
+  width: 250px;
+  background-color: aquamarine;
 }
