@@ -1,34 +1,48 @@
-import React from "react";
+import {React,useEffect} from "react";
 import Navbar from "../components/navbar/navbar";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 function Home(){
+
+    useEffect(() => {
+        AOS.init();
+      }, []);
+
+
     return(
         <div className="home">
             <Navbar/>
             <div className="hero grid place-items-center">
-            <div className="md:container md:mx-auto">
-                <div className="flex md:mx-auto items-center justify-evenly gap-x-8 animate__animated animate__bounce animate__repeat-3">
-                
-                <div className="text-center">
-                    <h1 className="text-black text-l md:text-5xl font-medium pb-5 	">
-                    WELCOME TO MY <span className="text-[#FF4B2B]">LABELLERY</span>
-                    </h1>
-                    <p className="text-slate-600">Mainly displaying about my works around mobile-apps that i develop 
-                    <br />also a gallery of photos that i took
-                    </p>
-                </div>
-
-
-                </div>
-            </div>
-            
-            </div>
-
-            <div className="about-me py-36" id="about">
+                <span className="circle rounded-full"></span>
+                <span className="circle rounded-full"></span>
 
                 <div className="md:container md:mx-auto">
                     <div className="flex md:mx-auto items-center justify-evenly gap-x-8">
                     
-                    <div className="introduction">
+                    <div className="text-center">
+                        <h1 className="nametag text-black text-l md:text-5xl font-medium pb-5 animate__heartBeat">
+                        WELCOME TO MY <span className=" text-[#FF4B2B]">LABELLERY</span>
+                        </h1>
+                        <p className="text-slate-600">Mainly displaying about my works around mobile-apps that i develop 
+                        <br />also a gallery of photos that i took
+                        </p>
+                    </div>
+
+
+                    </div>
+                </div>
+            
+            </div>
+
+            <div className="about-me py-36"  id="about">
+
+                <div className="md:container md:mx-auto">
+                    <div className="flex md:mx-auto items-center justify-evenly gap-x-8">
+                    
+                    <div className="introduction" data-aos="fade-left">
                         <h1 className="text-white font-medium text-l md:text-5xl pb-8">
                         About Me
                         </h1>
@@ -47,7 +61,7 @@ function Home(){
 
                     <div className="pfp mr-8">
                         {/* <img src='images/bmo.jpg' alt="" className="img-responsive rounded-full w-36" /> */}
-                        <div className="circle rounded-full">
+                        <div className="pfp-placehold rounded-full" data-aos="flip-right">
                             
                         </div>
                     </div>

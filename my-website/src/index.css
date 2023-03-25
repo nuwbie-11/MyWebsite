@@ -21,17 +21,50 @@ code {
     monospace;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .hero{
   height: 100vh;
 }
+
 
 .about-me{
   /* height: 80vh; */
   background-color: #222222;
 }
 
-.circle{
+
+.pfp-placehold{
   height: 250px;
   width: 250px;
   background-color: aquamarine;
 }
+
+.circle{
+  height: 250px;
+  width: 250px;
+  background-color: aquamarine;
+
+  position:absolute;
+  bottom: -2cm;
+  right: -3cm;
+  z-index: -1;
+}
+
+.circle:nth-child(2){
+  
+  height: 150px;
+  width: 150px;
+  background-color: #FF4B2B;
+
+  
+
+  position:absolute;
+  top: -1cm;
+  left: -2cm;
+  z-index: -1;
+}
+
+
