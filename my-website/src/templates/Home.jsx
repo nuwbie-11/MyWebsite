@@ -6,10 +6,10 @@ function Home(){
             <Navbar/>
             <div className="hero grid place-items-center">
             <div className="md:container md:mx-auto">
-                <div className="flex md:mx-auto items-center justify-evenly gap-x-8">
+                <div className="flex md:mx-auto items-center justify-evenly gap-x-8 animate__animated animate__bounce animate__repeat-3">
                 
                 <div className="text-center">
-                    <h1 className="text-black text-l md:text-5xl font-medium pb-5">
+                    <h1 className="text-black text-l md:text-5xl font-medium pb-5 	">
                     WELCOME TO MY <span className="text-[#FF4B2B]">LABELLERY</span>
                     </h1>
                     <p className="text-slate-600">Mainly displaying about my works around mobile-apps that i develop 
