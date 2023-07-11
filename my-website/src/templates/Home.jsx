@@ -11,22 +11,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import WorksSlider from "../components/slider/WorksSlider";
+import {WORKS,sliderSettings} from "../constant";
+
 function Home() {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const sliderSettings = {
-    dots: true,
-    autoplay: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: "center",
-    centerMode: true,
-    centerPadding: "60px",
-    lazyLoad: true,
-  };
 
   return (
     <div className="home">
@@ -130,58 +122,18 @@ function Home() {
                 width: "80vw",
               }}
             >
-              <Slider {...sliderSettings}>
-                <div>
-                  <div className="flex items-center justify-evenly">
-                    <div className="imageSection">
-                      <img
-                        src={process.env.PUBLIC_URL + "/Logo Fx.png"}
-                        className="img-responsive rounded w-36"
-                        alt=""
-                      />
-                    </div>
+            <Slider {...sliderSettings}>
 
-                    <div className="textSection">
-                      <p className="text-[#F8F7FF] text-right">
-                        <span className="font-medium text-l">LIHAT.IN</span>
-                        <br />
-                        An Application that mainly to help people with Visually
-                        Impaired condition
-                        <br />
-                        to recognize Rupiah paper denomination
-                      </p>
-                      <br />
-                      <a
-                        href={"https://github.com/nuwbie-11/"}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <p className="text-white text-right italic">
-                          read more
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <img
-                    src={process.env.PUBLIC_URL + "/logo192.png"}
-                    className="img-responsive rounded w-36 mx-auto mb-3"
-                    alt=""
+              {WORKS &&
+                WORKS.map((item) => (
+                  <WorksSlider
+                    title={item.title}
+                    description={item.description}
+                    url={item.url}
+                    imageUrl={item.imageUrl}
                   />
-                  <p className="text-white text-center">APP NAME</p>
-                </div>
-
-                <div>
-                  <img
-                    src={process.env.PUBLIC_URL + "/logo192.png"}
-                    className="img-responsive rounded w-36 mx-auto mb-3"
-                    alt=""
-                  />
-                  <p className="text-white text-center">APP NAME</p>
-                </div>
-              </Slider>
+                ))}
+            </Slider>
             </div>
           </div>
         </div>
