@@ -23,15 +23,21 @@ code {
 
 body{
   overflow-x: hidden;
+  
 }
 
 .hero{
   height: 100vh;
 }
 
+.nametag{
+  user-select: none;
+}
 
-.about-me{
-  /* height: 80vh; */
+
+.about-me, .works{
+  height: 80vh;
+  max-height: 100vh;
   background-color: #222222;
 }
 
@@ -45,7 +51,7 @@ body{
 .circle{
   height: 250px;
   width: 250px;
-  background-color: aquamarine;
+  background-color: #DD2972;
 
   position:absolute;
   bottom: -2cm;
