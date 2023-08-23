@@ -97,11 +97,11 @@ function Home() {
               </div>
             </div>
 
-            <div className="pfp mr-8 ">
+            <div className="pfp mb-12">
               <img
-                src={process.env.PUBLIC_URL + "/logo192.png"}
+                src={process.env.PUBLIC_URL + "/PFP.png"}
                 alt=""
-                className="img-responsive rounded-full w-36 "
+                className="img-responsive rounded-full"
                 data-aos="flip-right"
                 loading="lazy"
               />
