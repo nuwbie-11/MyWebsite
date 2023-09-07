@@ -27,7 +27,7 @@ export default function WorksSlider(props) {
             </p>
             <br />
             <a
-              href={"https://github.com/nuwbie-11/"+props.url}
+              href={props.url}
               target="_blank"
               rel="noreferrer"
             >

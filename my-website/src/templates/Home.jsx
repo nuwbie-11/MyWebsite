@@ -4,15 +4,16 @@ import Navbar from "../components/navbar/navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+
+import SocialLink from "../components/SocialLink/SocialLink";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import WorksSlider from "../components/slider/WorksSlider";
-import { WORKS, sliderSettings } from "../constant";
+import { WORKS, sliderSettings } from "../const/constant";
 
 function Home() {
   useEffect(() => {
@@ -27,7 +28,7 @@ function Home() {
           className="circle rounded-full animate__wobble"
           data-aos="fade-right"
         ></span>
-        <span className="circle rounded-full"></span>
+        <span className="circle rounded-full" data-aos="fade-left"></span>
         <div className="md:container md:mx-auto">
           <div className="flex md:mx-auto items-center justify-evenly gap-x-8">
             <div className="text-center">
@@ -38,10 +39,9 @@ function Home() {
                 </span>
               </h1>
               <p className="text-slate-600">
-                Mainly displaying about my works around mobile-apps that i
-                develop
+                Mainly Displaying about my works i've encountered
                 <br />
-                also a gallery of photos that i took
+
               </p>
             </div>
           </div>
@@ -53,11 +53,12 @@ function Home() {
         id="about"
       >
         <div className="md:container md:mx-auto">
-          <div className="flex items-center justify-around gap-x-8">
+          <div className="flex items-center justify-around">
             <div className="introduction" data-aos="fade-left">
               <h1 className="text-white font-medium text-l md:text-5xl pb-8">
                 About Me
               </h1>
+              {/* <hr /> */}
               <p className="text-[#F8F7FF] ">
                 I'm a Fresh Graduates from Universitas Jember on Information
                 System's Bachelor Degree Program 💻
@@ -70,7 +71,7 @@ function Home() {
                 <br />
                 Data Science, Mobile Development a litle bit. And some Office
                 like Excel and word
-                <br /> I also do photograpy as one of my hobbies. <a className="font-bold hover:text-sky-500" href="https://www.eyeem.com/u/34204359">See here</a> if you interested .
+                <br /> I also do photograpy as one of my hobbies. <a className="font-bold hover:text-sky-500" href="https://www.eyeem.com/u/adwitya_s/photos">See here</a> if you interested .
               </p>
               <br />
               <p className="text-[#F8F7FF]">
@@ -80,20 +81,8 @@ function Home() {
               </p>
 
               <div className="md:container md:mx-auto socialLink pt-12 flex gap-x-3">
-                <a href="https://github.com/nuwbie-11/" target="_blank" className="text-white hover:text-[#e8eaea] hover:scale-125 transition duration-150 ease-out hover:ease-in">
-                    <FontAwesomeIcon
-                    icon={faGithub}
-                    size="lg"
-                    // style={{ color: "white" }}
-                    ></FontAwesomeIcon>
-                </a>
-                <a href="https://www.linkedin.com/in/adwitya-sadhup/" target="_blank" className="text-white hover:text-[#0072b1] hover:scale-125 transition duration-150 ease-out hover:ease-in">
-                    <FontAwesomeIcon
-                    icon={faLinkedin}
-                    size="lg"
-                    // style={{ color: "white" }}
-                    ></FontAwesomeIcon>
-                </a>
+                <SocialLink Icon={faGithub} Link="https://github.com/nuwbie-11/" ></SocialLink>
+                <SocialLink Icon={faLinkedin} Link="ttps://www.linkedin.com/in/adwitya-sadhup/" ></SocialLink>
               </div>
             </div>
 
@@ -105,16 +94,12 @@ function Home() {
                 data-aos="flip-right"
                 loading="lazy"
               />
-              {/* <div className="pfp-placehold rounded-full" data-aos="flip-right"> */}
-
-              {/* </div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="works flex items-center justify-center" id="works">
-        <div className="md:container md:mx-auto">
+      <div className="works flex items-center justify-center md:container md:mx-auto" id="works">
           <div className="grid gap-y-8">
             <div className="sectionTitle ">
               <h1 className="text-center text-white font-medium text-l md:text-5xl mb-8">
@@ -123,7 +108,7 @@ function Home() {
               <p className="text-center text-slate-600 italic ">Shows most anticipated projects of mine. More on my github Pages!!</p>
             </div>
             <div
-              className="md:mx-auto"
+              className=""
               style={{
                 width: "80vw",
               }}
@@ -141,7 +126,35 @@ function Home() {
               </Slider>
             </div>
           </div>
-        </div>
+      </div>
+
+      <div className="footer text-white">
+        <footer className="grid grid-cols-3 justify-items-center  h-full">
+          <div className="grid grid-rows-3 content-between items-center">
+            <div className=""></div>
+            <h1 className="nametag  text-l md:text-3xl font-medium">
+                ADWITIYA.
+                <span className=" text-transparent bg-clip-text bg-gradient-to-r from-[#FF4B2B] to-pink-600">
+                  DEV
+                </span>
+              </h1>
+            <div className="socials flex gap-x-5">
+            <SocialLink Icon={faGithub} Link="https://github.com/nuwbie-11/" ></SocialLink>
+                <SocialLink Icon={faLinkedin} Link="https://www.linkedin.com/in/adwitya-sadhup/" ></SocialLink>
+                <SocialLink Icon={faTwitter} Link="https://twitter.com/saduuduuw"></SocialLink>
+            </div>
+          </div>
+          <div className="">
+            <p>
+              
+            </p>
+          </div>
+          <div className="">
+            <p>
+              Ppp
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );

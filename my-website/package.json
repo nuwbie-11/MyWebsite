@@ -1,7 +1,7 @@
 {
   "name": "my-website",
   "version": "0.1.0",
-  "homepage": "https://github.com/nuwbie-11/MyWebsite",
+  "homepage": "https://nuwbie-11.github.io/MyWebsite",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,6 +11,7 @@
     "aos": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4",
     "wowjs": "^1.1.3"

@@ -35,7 +35,7 @@ body{
 }
 
 
-.about-me, .works{
+.about-me, .works, .footer{
   height: 80vh;
   max-height: 100vh;
   background-color: #222222;
